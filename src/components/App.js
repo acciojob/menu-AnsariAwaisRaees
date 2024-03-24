@@ -1,18 +1,16 @@
-import React,{useState} from "react"
-import './../styles/App.css';
-import Menu from "./Menu";
 
+import React,{useState} from "react";
+import Menu from "./Menu";
+import Menudisplay from "./Menudisplay";
+import "../styles/App.css"
 
 function App(){
-    
-        return (
-             <div>
-                <Menu/>
-             </div>
-          )
+    let [catagory,setCatogory] = useState("all");
+    return (
+        <div>
+            <Menu setCatogory={setCatogory}/>
+            <Menudisplay catagory={catagory}/>
+        </div>
+    )
 }
-
-{/* <p>Now I can render any React component on any DOM node I want using ReactDOM.render</p> */}
- 
 export default App;
-
